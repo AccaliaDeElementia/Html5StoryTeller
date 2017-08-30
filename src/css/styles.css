@@ -1,0 +1,23 @@
+.main-text {
+  min-height: 450px;
+  overflow-y: scroll;
+}
+
+.stats-column {
+  flex-grow: 0;
+  max-width: 10rem;
+}
+
+.stats-column > div {
+  padding: 0.25rem;
+  border: 1px solid;
+}
+
+.main-column {
+  flex-grow: 1;
+  margin-left: 0.5rem;
+}
+
+.button-container > div {
+  padding-bottom: .25rem;
+}

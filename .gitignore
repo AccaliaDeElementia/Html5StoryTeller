@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# Cloud9 environment folder
+.c9
