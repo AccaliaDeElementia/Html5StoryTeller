@@ -1,4 +1,4 @@
-var dom = require('./dom')
+var dom = require('./dom')(document, window)
 
 var self = {
   createContainer: function createContainer (parent, title, showTitle) {

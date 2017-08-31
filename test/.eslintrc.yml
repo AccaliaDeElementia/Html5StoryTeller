@@ -1,5 +1,6 @@
 env:
-  browser: true
+  node: true,
+  mocha: true
 extends: 'standard'
 parserOptions:
   ecmaVersion: 5

@@ -4,7 +4,12 @@
   "description": "A storyteller using html5 <BBUILD_PACKAGE>",
   "main": "tests.js",
   "scripts": {
-    "test": "eslint .",
+    "lint": "eslint .",
+    "preistanbul": "npm run lint",
+    "istanbul": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive -R dot",
+    "pretest": "npm run istanbul",
+    "test": "istanbul check-coverage coverage/coverage.json",
+    "mocha": "mocha --recursive -R dot",
     "prebuild": "npm test",
     "build": "webpack --config webpack.config.js"
   },
@@ -17,9 +22,15 @@
   "homepage": "https://github.com/AccaliaDeElementia/Html5StoryTeller#readme",
   "dependencies": {},
   "devDependencies": {
+    "chai": "^4.1.1",
     "css-loader": "^0.28.5",
     "eslint": "^4.5.0",
     "extract-text-webpack-plugin": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0",
     "standard": "^10.0.3",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5"
