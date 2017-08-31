@@ -1,5 +1,5 @@
 // var foo = require('./GameEngine')
-var utils = require('./Utils')
+var utils = require('./utils')
 
 function renderLayout () {
   var height = window.innerHeight

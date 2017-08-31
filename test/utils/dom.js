@@ -7,7 +7,7 @@ chai.should()
 // chai.use(require('sinon-chai'))
 
 var JSDOM = require('jsdom').JSDOM
-var domFn = require('../../src/js/Utils/dom')
+var domFn = require('../../src/js/utils/dom')
 
 describe('GameUtils dom manipulation', () => {
   var document, window, jsdom, dom
@@ -22,14 +22,13 @@ describe('GameUtils dom manipulation', () => {
       chai.expect(dom.insertElement).to.be.a('function')
     })
     it('should insert a div by default', () => {
-      const parent = document.createElement('div')
-      dom.insertElement(parent)
+      dom.insertElement('div')
       parent.innerHTML.should.equal('<div class=""></div>')
     })
+    
     it('should insert a specified element type', () => {
       const target = 'element' + (Math.floor(Math.random() * 10000))
-      const parent = document.createElement('div')
-      dom.insertElement(parent, undefined, undefined, undefined, target)
+      dom.insertElement('div', undefined, undefined, undefined, target)
       parent.innerHTML.should.equal('<' + target + ' class=""></' + target + '>')
     })
   })
