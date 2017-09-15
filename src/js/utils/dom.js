@@ -2,7 +2,9 @@ module.exports = function bind (document, window) {
   var self = {
     insertElement: function insertElement (parent, className, content, data, elementName) {
       var container = document.createElement(elementName || 'div')
-      container.className = className || ''
+      if (className) {
+        container.className = className
+      }
       container.storyData = data || {}
       container.innerHTML = content || ''
 

@@ -1,5 +1,5 @@
 var dom = require('./dom')(document, window)
-var attributes = require('./attributes')
+var attributes = require('./attributes')(dom)
 
 var self = {
   dom: dom,

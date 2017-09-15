@@ -2,7 +2,7 @@ verbose: false
 instrumentation:
     compact: false
     preserve-comments: true
-    excludes: ["dist/**", "vendor/**", "src/css/**"]
+    excludes: ["dist/**", "vendor/**", "src/css/**", "build/**", "webpack.config.js", "src/js/storyteller.js"]
     include-all-sources: true
 reporting:
     print: both
@@ -17,8 +17,3 @@ check:
         functions: 95
         lines: 95
         statements: 95
-    each:
-        branches: 80
-        functions: 80
-        lines: 80
-        statements: 

@@ -4,7 +4,6 @@
   "description": "A storyteller using HTML5 and EcmaScript5",
   "main": "tests.js",
   "scripts": {
-    "init": "validate-commit-msg",
     "lint": "eslint .",
     "preistanbul": "npm run lint",
     "istanbul": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive -R dot",

@@ -1,4 +1,5 @@
-// var foo = require('./GameEngine')
+
+//
 var utils = require('./utils')
 
 function renderLayout () {
